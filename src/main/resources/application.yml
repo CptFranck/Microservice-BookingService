@@ -1,3 +1,24 @@
 spring:
   application:
     name: BookingService
+  # MySQL
+  datasource:
+    url: jdbc:mysql://localhost:3306/ticketing
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: none
+
+server:
+  port: 8081
+
+logging:
+  level:
+    root: debug
+
+inventory:
+  service:
+    url: http://localhost:8080/api/v1/inventory
