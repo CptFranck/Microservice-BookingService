@@ -11,7 +11,14 @@ spring:
     database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: none
-
+  #Kafka
+  kafka:
+    bootstrap-servers: localhost:9092
+    template:
+      default-topic: booking
+    producer:
+      key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
+      value-serializer: "org.apache.kafka.common.serialization.StringSerializer"
 server:
   port: 8081
 
