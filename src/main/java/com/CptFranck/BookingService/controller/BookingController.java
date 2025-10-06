@@ -19,9 +19,4 @@ public class BookingController {
     public BookingResponse createBooking(@RequestBody BookingRequest request){
         return bookingService.createBooking(request);
     }
-
-    @GetMapping("/inventory/venue/{venueId}")
-    public @ResponseBody VenueInventoryResponse inventoryGetAllResponses(@PathVariable("venueId") Long venueId){
-        return inventoryService.getVenueInformation(venueId);
-    }
 }
