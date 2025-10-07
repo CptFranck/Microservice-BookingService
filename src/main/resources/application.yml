@@ -1,6 +1,7 @@
 spring:
   application:
     name: BookingService
+
   # MySQL
   datasource:
     url: jdbc:mysql://localhost:3306/ticketing
@@ -11,14 +12,16 @@ spring:
     database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: none
-  #Kafka
+
+  # Kafka
   kafka:
     bootstrap-servers: localhost:9092
     template:
       default-topic: booking
     producer:
-      key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
-      value-serializer: "org.springframework.kafka.support.serializer.JsonSerializer"
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
 server:
   port: 8081
 
