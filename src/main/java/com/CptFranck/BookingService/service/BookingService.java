@@ -1,12 +1,12 @@
 package com.CptFranck.BookingService.service;
 
 import com.CptFranck.BookingService.client.InventoryServiceClient;
-import com.CptFranck.BookingService.dto.BookingEvent;
 import com.CptFranck.BookingService.dto.BookingRequest;
 import com.CptFranck.BookingService.dto.BookingResponse;
 import com.CptFranck.BookingService.dto.InventoryResponse;
 import com.CptFranck.BookingService.entity.CustomerEntity;
 import com.CptFranck.BookingService.repository.CustomerRepository;
+import com.CptFranck.dto.BookingEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
