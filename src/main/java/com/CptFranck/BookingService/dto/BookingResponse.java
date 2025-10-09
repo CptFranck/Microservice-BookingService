@@ -18,6 +18,4 @@ public class BookingResponse {
     private Long eventId;
 
     private Long ticketCount;
-
-    private BigDecimal totalPrice;
 }

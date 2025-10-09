@@ -2,7 +2,6 @@ package com.CptFranck.BookingService.service;
 
 import com.CptFranck.BookingService.dto.BookingRequest;
 import com.CptFranck.BookingService.dto.BookingResponse;
-import com.CptFranck.BookingService.dto.InventoryResponse;
 import com.CptFranck.BookingService.entity.CustomerEntity;
 import com.CptFranck.BookingService.repository.CustomerRepository;
 import com.CptFranck.dto.BookingEvent;
@@ -39,8 +38,7 @@ public class BookingService {
                 .build();
     }
 
-    private BookingEvent createBookingEvent(final BookingRequest request,
-                                            final CustomerEntity customer) {
+    private BookingEvent createBookingEvent(final BookingRequest request, final CustomerEntity customer) {
         return BookingEvent.builder()
                 .userId(customer.getId())
                 .eventId(request.getEventId())
