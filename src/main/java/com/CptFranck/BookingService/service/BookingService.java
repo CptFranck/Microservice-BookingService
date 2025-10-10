@@ -27,7 +27,7 @@ public class BookingService {
                 .orElseThrow(() -> new RuntimeException("User not Found !"));
 
         final BookingEvent bookingEvent = createBookingEvent(request, customer);
-        log.info("Booking Event : {}", bookingEvent);
+        log.info("Emit booking event : {}", bookingEvent);
 
         bookingEventKafkaTemplate.send("booking-event", bookingEvent);
 
