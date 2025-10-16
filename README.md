@@ -25,6 +25,8 @@ It provides REST endpoints to create, update, and retrieve bookings, and publish
 
 ## 🧩 Architecture Integration
 
+![Architecture du projet](docs/schemaProject.png)
+
 The Booking Service is part of a **5-repository microservice ecosystem**:
 
 1. **Common** – Shared DTOs and utilities used across services.  
