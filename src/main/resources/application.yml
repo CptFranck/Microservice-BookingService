@@ -19,15 +19,15 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
+server:
+  port: 8081
+
 #OpenAPI
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
   api-docs:
     path: /v3/api-docs
-
-server:
-  port: 8081
 
 #logging:
 #  level:
